@@ -1,0 +1,149 @@
+<view class="container">
+  <view class="test_box">
+    <view class="user_box">
+      <image src="{{userAvatar}}" background-size="cover" lazy-load="true"></image>
+      <view class="user_msg">
+        <view class="name_box">
+          <text class="name">{{userName}}</text>
+          <image src="../../images/cup.png" mode="aspectFit" lazy-load="true"></image>
+        </view>
+        <view class="tit_box">
+          <text class="t1">五棵松校区</text>
+          <text class="t2">特训队</text>
+          <text class="t3">教练:Dimi</text>
+        </view>
+      </view>
+    </view>
+    <view class="table">
+      <view class="tr">
+        <view class="td">
+          <text>运球</text>
+          <text>3.0</text>
+        </view>
+        <view class="td">
+          <text>进攻</text>
+          <text>3.0</text>
+        </view>
+      </view>
+      <view class="tr">
+        <view class="td">
+          <text>防守</text>
+          <text>3.0</text>
+        </view>
+        <view class="td">
+          <text>投篮</text>
+          <text>3.0</text>
+        </view>
+      </view>
+      <view class="tr">
+        <view class="td">
+          <text>传球</text>
+          <text>3.0</text>
+        </view>
+        <view class="td">
+          <text>上篮</text>
+          <text>3.0</text>
+        </view>
+      </view>
+      <view class="tr">
+        <view class="td">
+          <text>体能</text>
+          <text>3.0</text>
+        </view>
+        <view class="td">
+          <text>耐力</text>
+          <text>3.0</text>
+        </view>
+      </view>
+      <view class="tr">
+        <view class="td">
+          <text>速度</text>
+          <text>3.0</text>
+        </view>
+        <view class="td">
+          <text>弹跳</text>
+          <text>3.0</text>
+        </view>
+      </view>
+      <view class="tr">
+        <view class="td">
+          <text>上课时间</text>
+          <text>周六下午16:00</text>
+        </view>
+      </view>
+      <view class="tr">
+        <view class="td">
+          <text>上课时间</text>
+          <text>周六下午16:00</text>
+        </view>
+      </view>
+      <view class="tr">
+        <view class="td">
+          <text>总课时</text>
+          <text>20节</text>
+        </view>
+      </view>
+      <view class="tr">
+        <view class="td">
+          <text>剩余时间</text>
+          <text>6节</text>
+        </view>
+      </view>
+      <view class="tr">
+        <view class="td">
+          <text>上课截止</text>
+          <text>2018年12月31日</text>
+        </view>
+      </view>
+    </view>
+    <view class="sati_box">
+      <view class="sati_tit">课堂满意度</view>
+      <view class="sati_con">
+        <block>
+          <view class="sati_item">
+            <text class="item_tit">中教<text class="i"></text></text>
+            <text class="item_mark"> : </text>
+            <view>
+              <star-rate-m bindchange="handleChange1" rate="{{rate1}}">
+                <text style='margin-left:20px;color:#ccc;font-size:24rpx;'>{{ rate1 }}分</text>
+              </star-rate-m>
+            </view>
+          </view>
+          <view class="sati_item">
+            <text class="item_tit">外教<text class="i"></text></text>
+            <text class="item_mark"> : </text>
+            <view>
+              <star-rate-m bindchange="handleChange2" rate="{{rate2}}">
+                <text style='margin-left:20px;color:#ccc;font-size:24rpx;'>{{ rate2 }}分</text>
+              </star-rate-m>
+            </view>
+          </view>
+          <view class="sati_item">
+            <text class="item_tit">班主任<text class="i"></text></text>
+            <text class="item_mark"> : </text>
+            <view>
+              <star-rate-m bindchange="handleChange3" rate="{{rate3}}">
+                <text style='margin-left:20px;color:#ccc;font-size:24rpx;'>{{ rate3 }}分</text>
+              </star-rate-m>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="idea_box">
+      <view class="idea_tit">对孩子关注度需求和建议</view>
+      <form bindsubmit="formSubmit" class="form_area">
+        <view class="editbox">
+          <textarea style="width:100%;height:6em;font-size:28rpx;" placeholder="诚邀您的加入，感谢您的认可" name="tip"/>
+        </view>
+        <view class="btn-area">
+          <button class="btn" formType="submit">提交</button>
+          <label class="checkbox">
+            <checkbox value="" checked="false"/>
+            <text class="text">匿名评价</text>
+          </label>
+        </view>
+      </form>
+    </view>
+  </view>
+</view>

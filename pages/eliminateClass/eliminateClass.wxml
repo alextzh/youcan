@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="list">
+    <block wx:if="{{teamList.length > 0}}" wx:for="{{teamList}}" wx:key="index">
+      <view class="item" catchtap="toDetail" data-item="{{item}}">
+        <view class="item_head">
+          <icon class="iconfont icon-tuandui"></icon>
+          <text class="title">{{item.name}}</text>
+        </view>
+        <view class="item_body">
+          <view class="item__left" style="width:44%;">
+            <text>团队水平：</text>
+            <text class="new_data">{{item.team_level}}</text>
+          </view>
+          <view class="item__right" style="width:56%;text-align:right;">
+            <text style="flex:1;">团队人数：</text>
+            <text class="all_data" style="flex:0 auto;">{{item.customers}}人</text>
+          </view>
+        </view>
+        <view class="item_body">
+          <view class="item__left" style="width:60%;">
+            <text>上课时间：</text>
+            <text class="new_data">{{item.class_time}}</text>
+          </view>
+          <view class="item__right" style="width:40%;text-align:right;">
+            <text style="flex:1;">年龄段：</text>
+            <text class="all_data" style="flex:0 auto;">{{item.age_group}}岁</text>
+          </view>
+        </view>
+        <view class="item_foot">
+          <text>所在校区：</text>
+          <text class="content">{{item.campus_name}}</text>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{hasData}}">
+      <view class="no_data">
+        <icon class="iconfont icon-nodata"></icon>
+      </view>
+    </block>
+  </view>
+</view>
+

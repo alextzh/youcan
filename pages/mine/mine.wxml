@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="box">
+    <view class="userinfo">
+      <view class="info_box">
+        <image class="user_avatar" src="{{userAvatar}}"></image>
+        <view class="user_msg">
+          <text class="name">{{username}}【<text style='color:red' >{{nationality}}</text>】</text>
+          <text class="mobile">{{mobile}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="border"></view>
+    <view class="list">
+      <view class="item" bindtap="toEliminate">
+        <icon class="iconfont icon-jilu"></icon>
+        <text class="text">学员消课</text>
+      </view>
+      <view class="item" bindtap="toDataRecord">
+        <icon class="iconfont icon-shuju"></icon>
+        <text class="text">数据记录</text>
+      </view>
+    </view>
+    <view class="btn_area">
+      <button bindtap="loginOut">退出</button>
+    </view>
+  </view>
+</view>

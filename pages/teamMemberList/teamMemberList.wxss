@@ -1,0 +1,102 @@
+.box{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: #f7f7f7;
+}
+.form_area{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.m_item{
+  padding-top: 20rpx;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.m_title{
+  display: flex;
+  width: 100%;
+  padding: 0 20rpx;
+  align-items: center;
+  justify-content: center;
+  background: #dfdfdf;
+  height: 80rpx;
+  line-height: 80rpx;
+  box-sizing: border-box;
+}
+.m_title>icon{
+  font-size: 18px;
+  color:#FF7302;
+  padding-right:10rpx;
+}
+.m_title>text{
+  flex: 1;
+  font-size:30rpx;
+  color:#FF7302;
+}
+.m_list{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 20rpx;
+  align-items: center;
+  justify-content: center;
+  background:#fff;
+  line-height: 80rpx;
+  box-sizing: border-box;
+}
+.l_item{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom:1px solid #ccc;
+}
+.l_item:last-child{border-bottom: 0 none;}
+.m_list label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 36rpx;
+  height: 110rpx;
+}
+.cbx_font{
+  font-size: 28rpx;
+  flex-direction: row;
+  width: 100%;
+  display: flex;
+}
+.base_info{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 120prx;
+}
+.base_info>text{
+  height:40rpx;
+  line-height: 40rpx;
+}
+.m_action{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.m_action button{
+  font-size:28rpx;
+  line-height:60rpx;
+  background: #005faf;
+}
+.form_btn{
+  position: fixed;
+  bottom: 0;
+  left:0;
+  width: 100%;
+}

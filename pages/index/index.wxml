@@ -1,0 +1,67 @@
+<view class="container">
+  <view class="logo_box">
+    <image src="../../images/logo.png" mode="aspectFit" lazy-load="true"></image>
+  </view>
+  <view class="my_box">
+    <view></view>
+    <view class="avatar_box">
+      <image src="{{userAvatar}}" background-size="cover" lazy-load="true"></image>
+      <text class="avatar_name">{{userName}}</text>
+    </view>
+    <view class="list_box">
+      <view class="name_box">
+        <text class="name">{{userName}}</text>
+        <image src="../../images/cup.png" mode="aspectFit" lazy-load="true"></image>
+      </view>
+      <view class="tit_box">
+        <text class="t1">五棵松校区</text>
+        <text class="t2">特训队</text>
+        <text class="t3">近3个月上课记录</text>
+      </view>
+      <view class="item_box">
+        <block>
+          <view class="item" bindtap="bindViewTap">
+            <image src="../../images/avatar.jpg" background-size="cover" lazy-load="true"></image>
+            <view class="item_mid">
+              <text class="mid_t">投篮训练</text>
+              <view class="mid_b"><star-rate-s rate="4" disabled="true"></star-rate-s></view>
+            </view>
+            <text class="item_date">04月16日</text>
+          </view>
+          <view class="item">
+            <image src="../../images/avatar.jpg" background-size="cover" lazy-load="true"></image>
+            <view class="item_mid">
+              <text class="mid_t">投篮训练</text>
+              <view class="mid_b"><star-rate-s rate="4" disabled="true"></star-rate-s></view>
+            </view>
+            <text class="item_date">04月16日</text>
+          </view>
+          <view class="item">
+            <image src="../../images/avatar.jpg" background-size="cover" lazy-load="true"></image>
+            <view class="item_mid">
+              <text class="mid_t">投篮训练</text>
+              <view class="mid_b"><star-rate-s rate="4" disabled="true"></star-rate-s></view>
+            </view>
+            <text class="item_date">04月16日</text>
+          </view>
+        </block>
+      </view>
+      <view class="item_anchor">
+        <text>全部课程记录</text>
+      </view>
+    </view>
+  </view>
+  <view class="banner">
+    <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+      <block wx:for="{{imgUrls}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" lazy-load="true" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="btn_box">
+    <button class="btn" open-type="contact">联系客服</button>
+  </view>
+</view>

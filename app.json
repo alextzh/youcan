@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/mine/mine",
+    "pages/eliminateClass/eliminateClass",
+    "pages/teamMemberList/teamMemberList",
+    "pages/index/index",
+    "pages/classTest/classTest",
+    "pages/customSearch/customSearch",
+    "pages/persionSearch/persionSearch",
+    "pages/dataRecord/dataRecord",
+    "pages/dataCollection/dataCollection"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  }
+}

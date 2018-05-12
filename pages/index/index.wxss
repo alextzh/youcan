@@ -1,0 +1,162 @@
+.container{background:#f7f7f7;}
+.logo_box{
+  width: 100%;
+  padding:30rpx 0;
+  height:120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo_box image{
+  width: 236px;
+  height:47px;
+}
+.my_box{
+  padding-top:100rpx;
+  width: 100%;
+  position: relative;
+}
+.avatar_box{
+  position: absolute;
+  top:0;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.avatar_box image{
+  width:140rpx;
+  height:140rpx;
+  border-radius: 100%;
+}
+.avatar_name{
+  font-size:32rpx;
+  padding:10rpx 0;
+}
+.list_box{
+  position:relative;
+  z-index:10;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding:140rpx 40rpx 0;
+  box-sizing: border-box;
+  border: 1px solid #dfdfdf;
+  border-radius: 8rpx;
+}
+.name_box{
+  display: flex;
+  width:100%;
+  align-items: flex-end;
+  height: 40rpx;
+}
+.name_box .name{
+  font-size:28rpx;
+  color:#999;
+}
+.name_box image{
+  width: 40rpx;
+  height:40rpx;
+}
+.tit_box{
+  display: flex;
+  width:100%;
+  align-items: center;
+  height:80rpx;
+}
+.tit_box .t1{
+  font-size: 32rpx;
+}
+.tit_box .t2{
+  padding:0 20rpx;
+  font-size: 32rpx;
+  color:#2196F3;
+}
+.tit_box .t3{
+  flex: 1;
+  text-align: right;
+  font-size: 28rpx;
+  color:#999;
+}
+.item_box{width:100%;}
+.item{
+  display: flex;
+  width:100%;
+  height:136rpx;
+  align-items: center;
+  justify-content: space-between;
+  border-top:1px solid #dfdfdf;
+  box-sizing: border-box;
+}
+.item:last-child{
+  border-bottom:1px solid #dfdfdf;
+}
+.item:active{
+  background: rgba(150,150,150,.1)
+}
+.item image{
+  width:70rpx;
+  height:70rpx;
+  border-radius: 12rpx;
+}
+.item_mid{
+  flex: 1;
+  padding:0 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mid_t{
+  font-size:32rpx;
+  padding-bottom:10rpx;
+  letter-spacing: 1px;
+}
+.mid_b{
+  font-size:24rpx;
+  color:#999;
+}
+.item_date{
+  font-size:28rpx;
+  color:#999;
+}
+.item_anchor{
+  height:120rpx;
+  font-size:32rpx;
+  color:#999;
+  display: flex;
+  align-items: center;
+}
+.banner{
+  width:100%;
+  height:100px;
+  margin-top:20rpx;
+}
+swiper{
+  height:100px;
+}
+swiper-item{
+  border-radius: 4px;
+}
+.banner image{
+  width: 100%;
+  height:100%;
+}
+.btn_box{
+  display: flex;
+  width:100%;
+  height:120rpx;
+  align-items: center;
+  justify-content: center;
+}
+.btn_box .btn{
+  width:260rpx;
+  height:60rpx;
+  line-height: 60rpx;
+  font-size:28rpx;
+  color:#999;
+  background: #dfdfdf;
+  border:0 none;
+}

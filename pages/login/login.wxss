@@ -1,0 +1,84 @@
+page {
+  background: #005faf;
+}
+.logo{
+  margin-top: 100rpx;
+  margin-bottom: 120rpx;
+}
+.logo text{
+  font-size: 60rpx;
+  color: #222;
+}
+.form_area{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+}
+.tabs_box{
+  display:flex;
+  width:100%;
+  justify-content:center;
+  padding:0 30rpx;
+  box-sizing:border-box;
+}
+.radio_group{
+  flex:1;
+  text-align:center;
+  padding-bottom:40rpx;
+}
+.radio_group label{
+  padding: 0 20rpx;
+}
+.radio_group text{
+  color: #fff;
+}
+.input_area{
+  flex:1;
+  padding:0 30rpx;
+  margin-bottom:80rpx;
+}
+.input_form{
+  position:relative;
+  height:100rpx;
+  line-height:100rpx;
+  box-sizing:border-box;
+}
+.input_form icon{
+  position:absolute;
+  top: 0;
+  left: 0;
+  font-size: 36rpx;
+  color: #FF7302;
+}
+.input_form input{
+  position: relative;
+  height:100rpx;
+  line-height:100rpx;
+  padding:0 30rpx 0 50rpx;
+  color: #fff;
+}
+.input_form input::after{
+  content:" ";
+  width:200%;
+  height:200%;
+  position:absolute;
+  top:0;
+  left:0;
+  border-bottom:1px solid #fff;
+  -webkit-transform:scale(0.5);
+  transform:scale(0.5);
+  -webkit-transform-origin:0 0;
+  transform-origin:0 0;
+  box-sizing:border-box;
+}
+.btn_area{
+  width:90%;
+  margin: 0 auto;
+}
+.btn_area button{
+  background: #fff;
+  color: #005faf;
+}
+.btn_area button:active{
+  background: rgba(255, 255, 255, 0.7)
+}

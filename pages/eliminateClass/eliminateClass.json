@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "学员消课",
+  "navigationBarBackgroundColor": "#005faf",
+  "navigationBarTextStyle": "light",
+  "backgroundColor": "#f4f4f4",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true
+}

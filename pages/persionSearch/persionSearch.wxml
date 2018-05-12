@@ -1,0 +1,40 @@
+<view class="box">
+  <view class="search_box">
+    <view class="search">
+      <icon class="iconfont icon-search"></icon>
+      <input type="text" value="{{inputVal}}" placeholder="请输入关键字" auto-focus="true" confirm-type="search" bindinput="searchAction" />
+      <icon class="iconfont icon-close {{isShow?' close':''}}" bindtap="clearInput"></icon>
+    </view>
+  </view>
+  <form class="form_area" bindsubmit="formSubmit" report-submit="true">
+    <view class="list">
+      <radio-group class="radio-group" bindchange="radioChange" name="persion" style="width:100%;">
+        <block wx:if="{{persions.length > 0}}" wx:for="{{persions}}" wx:key="index">
+          <view class="item">
+            <label class="radio">
+              <view class='cbx_font'>
+                <view class='base_info'>
+                  <text>{{item.ch_name}}【<text style='color:red' >{{item.persion_country}}</text>】</text>
+                  <text>{{item.mobile}}</text>
+                </view>
+                <view>{{item.persion_type}}</view>
+              </view>
+              <radio class="radio_item" value="{{item.value}}" checked="{{item.checked}}" color="#005faf" />
+            </label>
+          </view>
+        </block>
+      </radio-group>
+    </view>
+    <block wx:if="{{!hasData}}">
+      <view class="form_btn">
+        <button formType="submit">添加教练</button>
+      </view>
+    </block>
+    <block wx:if="{{hasData}}">
+      <view class="no_data" style="top:100rpx;">
+        <icon class="iconfont icon-nodata"></icon>
+      </view>
+    </block>
+  </form>
+</view>
+

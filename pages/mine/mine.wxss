@@ -1,0 +1,147 @@
+page{
+  background: #fff;
+}
+.box{
+  width: 100%;
+  display: flex;
+  flex-direction:column;
+}
+.userinfo{
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 30%;
+  -webkit-transform-origin: top;
+  transform-origin: top;
+  background:#005faf;
+  background-size: cover;
+  box-sizing: border-box;
+  border:0;
+  outline:0;
+  /* box-shadow: 0 2px 6px rgba(0,0,0,.2); */
+}
+.bg_img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.info_box{
+  position:absolute;
+  top:50%;
+  text-align:center;
+  z-index:50;
+  -webkit-transform:translateY(-50%);
+  transform:translateY(-50%);
+  display:flex;
+  align-items:center;
+  box-sizing: border-box;
+  width:100%;
+  padding:40rpx;
+}
+.user_avatar{
+  flex: 0 0 120rpx;
+  width:120rpx;
+  height:120rpx;
+  border-radius: 50%;
+}
+.user_msg{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-start;
+  flex: 1;
+  padding-left: 40rpx;
+  overflow: hidden;
+  line-height: 1.5;
+}
+.user_msg .name{
+  font-size: 32rpx;
+  color: #fff;
+}
+.user_msg .mobile{
+  color:#fff;
+  font-size:28rpx;
+}
+.border {
+  height: 30rpx;
+  position: relative;
+}
+.border::after {
+  content:" ";
+  width:200%;
+  height:200%;
+  position:absolute;
+  top:0;
+  left:0;
+  border-bottom:1px solid #BDBDBD; 
+  -webkit-transform:scale(0.5);
+  transform:scale(0.5);
+  -webkit-transform-origin:0 0;
+  transform-origin:0 0;
+  box-sizing:border-box;
+}
+.list{
+  display:flex;
+  flex-wrap:wrap;
+  background: #fff;
+}
+.item{
+  position: relative;
+  background:#fff;
+  color: #333;
+  transition: all .3s;
+  box-sizing: border-box;
+  width:50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding:40rpx;
+  margin: 0;
+}
+.item:active{
+  background: rgba(0,0,0,.1);
+}
+.item:active button {
+  background: rgba(0,0,0,.1);
+}
+.item::after{
+  content:" ";
+  width:200%;
+  height:200%;
+  position:absolute;
+  top:0;
+  left:0;
+  border-right:1px solid #BDBDBD;
+  border-bottom:1px solid #BDBDBD; 
+  -webkit-transform:scale(0.5);
+  transform:scale(0.5);
+  -webkit-transform-origin:0 0;
+  transform-origin:0 0;
+  box-sizing:border-box;
+  border-radius: 0;
+}
+.item:nth-child(2n)::after {
+  border-right:0 none;
+}
+.item icon{
+  font-size:50rpx;
+  color:#FF7302;
+}
+.item .text{
+  flex: 1;
+  font-size: 28rpx;
+  padding-top:10px;
+}
+.btn_area{
+  margin: 60rpx 0;
+  padding:0 20rpx;
+}
+.btn_area button{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.fc999{color: #999999;}

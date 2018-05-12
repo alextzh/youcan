@@ -1,0 +1,112 @@
+<import src="../../components/rater/rater.wxml" />
+<view class="container">
+  <view class="item_info">
+    <view class="item_head">
+      <icon wx:if="{{currentItem.customer_sex === '男'}}" class="iconfont icon-boy"></icon>
+      <icon wx:if="{{currentItem.customer_sex === '女'}}" class="iconfont icon-girl"></icon>
+      <text class="title">{{currentItem.customer_name}}【<text style='color:red' >{{currentItem.customer_phone}}</text>】</text>
+    </view>
+    <view class="item_body">
+      <view class="item__left" style="width:40%;">
+        <text>年龄：</text>
+        <text class="new_data">{{currentItem.age}}岁</text>
+      </view>
+      <view class="item__right" style="width:60%;text-align:right;">
+        <text style="flex:1;">所属团队：</text>
+        <text class="all_data" style="flex:0 auto;">{{currentItem.team_name}}</text>
+      </view>
+    </view>
+    <view class="item_body">
+      <view class="item__left" style="width:60%;">
+        <text>课程类别：</text>
+        <text class="new_data">{{currentItem.course_type}}</text>
+      </view>
+      <view class="item__right" style="width:40%;text-align:right;">
+        <text style="flex:1;">课时：</text>
+        <text class="all_data" style="flex:0 auto;">{{currentItem.class_hour}}</text>
+      </view>
+    </view>
+  </view>
+  <form class="form_area" bindsubmit="formSubmit" report-submit="true">
+    <view class="m_item">
+      <view class="m_title">
+        <icon class="iconfont icon-laoshi"></icon>
+        <text>心能(必选)</text>
+      </view>
+      <view class="item_box">
+        <view class="item_i">
+          <text style="padding-right:20rpx;">专注</text>
+          <view>
+            <template is="rater" data="{{ ...$wux.rater.absorbed }}" />
+          </view>
+        </view>
+        <view class="item_i">
+          <text style="padding-right:20rpx;">自信</text>
+          <view>
+            <template is="rater" data="{{ ...$wux.rater.oneself }}" />
+          </view>
+        </view>
+        <view class="item_i">
+          <text style="padding-right:20rpx;">团队</text>
+          <view>
+            <template is="rater" data="{{ ...$wux.rater.team }}" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="m_item">
+      <view class="m_title">
+        <icon class="iconfont icon-laoshi"></icon>
+        <text>技能(非必选)</text>
+      </view>
+      <view class="item_box">
+        <view class="item_i">
+          <text style="padding-right:20rpx;">运球</text>
+          <view>
+            <template is="rater" data="{{ ...$wux.rater.yun }}" />
+          </view>
+        </view>
+        <view class="item_i">
+          <text style="padding-right:20rpx;">传球</text>
+          <view>
+            <template is="rater" data="{{ ...$wux.rater.chuan }}" />
+          </view>
+        </view>
+        <view class="item_i">
+          <text style="padding-right:20rpx;">投球</text>
+          <view>
+            <template is="rater" data="{{ ...$wux.rater.tou }}" />
+          </view>
+        </view>
+        <view class="item_i">
+          <text style="padding-right:20rpx;">防守</text>
+          <view>
+            <template is="rater" data="{{ ...$wux.rater.fang }}" />
+          </view>
+        </view>
+        <view class="item_i">
+          <text style="padding-right:20rpx;">进攻</text>
+          <view>
+            <template is="rater" data="{{ ...$wux.rater.jin }}" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="m_item">
+      <view class="m_title">
+        <icon class="iconfont icon-laoshi"></icon>
+        <text>教练寄语(选填)</text>
+      </view>
+      <view class="input_area" style="height:auto;margin-top:10px;">
+        <view class="input_con" style="height:auto;">
+          <view class="editbox">
+            <textarea style="width:100%;height:6em;font-size:28rpx;" placeholder="请输入对学员的寄语" name="describe"/>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="btn_area">
+      <button formType="submit">提交</button>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,57 @@
+<view class="box">
+  <form class="form_area" bindsubmit="formSubmit" report-submit="true">
+    <view class="m_item">
+      <view class="m_title">
+        <icon class="iconfont icon-laoshi"></icon>
+        <text>教练列表({{persions.length}}人)</text>
+        <icon style="padding-left:20rpx;font-size:30px;" class="iconfont icon-add" bindtap="addPersion"></icon>
+      </view>
+      <checkbox-group bindchange="persionsChange" name="persion" style="width:100%;">
+        <view class="m_list">
+          <block wx:if="{{persions.length > 0}}" wx:for="{{persions}}" wx:key="index">
+            <view class="l_item" bindlongpress="deletePersionItem" data-id="{{item.id}}">
+              <label class="checkbox">
+                <view class='cbx_font'>
+                  <view class='base_info'>
+                    <text>{{item.ch_name}}【<text style='color:red' >{{item.persion_country}}</text>】</text>
+                    <text>{{item.mobile}}</text>
+                  </view>
+                  <view>{{item.persion_type}}</view>
+                </view>
+                <checkbox value="{{item.value}}" checked="{{item.checked}}" />
+              </label>
+            </view>
+          </block>
+        </view>
+      </checkbox-group>
+    </view>
+    <view class="m_item" style="padding-bottom:100rpx;">
+      <view class="m_title">
+        <icon class="iconfont icon-xuesheng"></icon>
+        <text>学员列表({{customers.length}}人)</text>
+        <icon style="padding-left:20rpx;font-size:30px;" class="iconfont icon-add" bindtap="addCustomer"></icon>
+      </view>
+      <checkbox-group bindchange="customersChange" name="customer" style="width:100%;">
+        <view class="m_list">
+          <block wx:if="{{customers.length > 0}}" wx:for="{{customers}}" wx:key="index">
+            <view class="l_item" bindlongpress="deleteCustomerItem" data-id="{{item.id}}">
+              <label class="checkbox">
+                <view class='cbx_font'>
+                  <view class='base_info'>
+                    <text > {{item.name}}【<text style='color:red' >{{item.customer_type}}</text>】</text>
+                    <text> {{item.phone}} </text>
+                  </view>
+                  <view>剩余课时： {{item.remain_class_hour}}</view>
+                </view>
+                <checkbox value="{{item.value}}" checked="{{item.checked}}" />
+              </label>
+            </view>
+          </block>
+        </view>
+      </checkbox-group>
+    </view>
+    <view class="form_btn">
+      <button formType="submit">消课</button>
+    </view>
+  </form>
+</view>
