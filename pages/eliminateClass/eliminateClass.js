@@ -5,6 +5,9 @@ var rows = 10
 
 // 获取团队列表
 var getTeamList = function (that, id) {
+  wx.showLoading({
+    title: '加载中'
+  })
   wx.request({
     url: app.api_url + '/api/v1/team/listByPersionId',
     data: {
@@ -70,9 +73,6 @@ Page({
   onLoad: function (options) {
     page = 1
     var that = this
-    wx.showLoading({
-      title: '加载中'
-    })
     var pId = wx.getStorageSync('pId')
     if (pId) {
       getTeamList(that, pId)

@@ -7,16 +7,16 @@ Page({
   data: {
     currentItem: null,
     heart_energy: {
-      absorbed: 0,
-      oneself: 0,
-      team: 0
+      absorbed: 3,
+      oneself: 3,
+      team: 3
     },
     skill_energy: {
-      yun: 0,
-      chuan: 0,
-      tou: 0,
-      fang: 0,
-      jin: 0
+      yun: 3,
+      chuan: 3,
+      tou: 3,
+      fang: 3,
+      jin: 3
     },
     absorbedFlag: true,
     oneselfFlag: true,
@@ -198,9 +198,9 @@ Page({
             duration: 1000
           })
           setTimeout(() => {
-            wx.reLaunch({
-              url: '../mine/mine'
-            })
+            wx.navigateBack({
+              delta: -1
+            });
           }, 500)
         },
         fail: function (e) {

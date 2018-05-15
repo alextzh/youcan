@@ -6,10 +6,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userAvatar: '/images/avatar.png',
     mobile: '',
     username: '',
-    nationality: '',
+    mtype: '',
+    persion_level: '',
     isFirstAction: true
   },
   /**
@@ -24,7 +24,8 @@ Page({
       that.setData({
         mobile: mobile,
         username: userInfo.ch_name,
-        nationality: userInfo.nationality
+        mtype: userInfo.type,
+        persion_level: userInfo.persion_level
       })
     }
   },

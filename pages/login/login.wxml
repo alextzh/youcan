@@ -3,14 +3,14 @@
       <image style="width: 236px;height: 47px;" src="{{img_logo}}"></image>
     </view>
     <form class="form_area" bindsubmit="formSubmit" report-submit="true">
-      <view class="tabs_box">
+      <!-- <view class="tabs_box">
         <radio-group class="radio_group" bindchange="radioChange">
           <label class="radio" wx:for="{{tabs}}" wx:key="index">
             <radio value="{{item.value}}" checked="{{item.checked}}" color="#FF7302"/>
             <text>{{item.name}}</text>
           </label>
         </radio-group>
-      </view>
+      </view> -->
       <view class="input_area">
         <view class="input_form">
           <icon class="iconfont icon-phone"></icon>

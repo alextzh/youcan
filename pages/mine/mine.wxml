@@ -2,9 +2,14 @@
   <view class="box">
     <view class="userinfo">
       <view class="info_box">
-        <image class="user_avatar" src="{{userAvatar}}"></image>
+        <block wx:if="{{mtype === 'bzr'}}">
+          <icon class="user_avatar iconfont icon-bzr"></icon>
+        </block>
+        <block wx:if="{{mtype !== 'bzr'}}">
+          <icon class="user_avatar iconfont icon-coach"></icon>
+        </block>
         <view class="user_msg">
-          <text class="name">{{username}}【<text style='color:red' >{{nationality}}</text>】</text>
+          <text class="name">{{username}}<text style='color:red;padding-left:20rpx;font-size:24rpx;' >{{persion_level}}</text></text>
           <text class="mobile">{{mobile}}</text>
         </view>
       </view>

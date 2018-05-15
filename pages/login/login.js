@@ -16,7 +16,7 @@ Page({
     btnLoading: false,
     disabled: false,
     img_logo: '../../images/logo.png',
-    tabs:[],
+    // tabs:[],
     curType: ''
   },
   /**
@@ -25,8 +25,8 @@ Page({
   onLoad: function () {
     var that = this
     that.setData({
-      tabs: initTabs(that),
-      curType: 'customer'
+      // tabs: initTabs(that),
+      curType: 'coach'
     })
   },
   /**
@@ -34,19 +34,19 @@ Page({
    */
   onShow: function () {
   },
-  radioChange: function (e) {
-    var that = this
-    var val = e.detail.value
-    if (val === 'customer') {
-      that.setData({
-        curType: 'customer'
-      })
-    } else {
-      that.setData({
-        curType: 'coach'
-      })
-    }
-  },
+  // radioChange: function (e) {
+  //   var that = this
+  //   var val = e.detail.value
+  //   if (val === 'customer') {
+  //     that.setData({
+  //       curType: 'customer'
+  //     })
+  //   } else {
+  //     that.setData({
+  //       curType: 'coach'
+  //     })
+  //   }
+  // },
   // 登录提交操作
   formSubmit: function (e) {
     var param = e.detail.value

@@ -30,7 +30,7 @@
         </view>
       </view>
     </block>
-    <block wx:if="{{hasData}}">
+    <block wx:if="{{hasData && page === 1}}">
       <view class="no_data">
         <icon class="iconfont icon-nodata"></icon>
       </view>

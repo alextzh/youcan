@@ -3,6 +3,9 @@ const util = require('../../utils/util')
 
 // 获取学员和教练列表
 var getTeamMemberList = function (that, id) {
+  wx.showLoading({
+    title: '加载中'
+  })
   wx.request({
     url: app.api_url + '/api/v1/team/persionsByTeamId',
     data: {
@@ -61,13 +64,14 @@ Page({
    */
   onLoad: function (options) {
     var that = this
-    wx.showLoading({
-      title: '加载中'
-    })
     var cTeam = wx.getStorageSync('cTeam')
     if (cTeam) {
       getTeamMemberList(that, cTeam.id)
     }
+  },
+  onShow: function () {
+    var that = this
+    that.onLoad()
   },
   persionsChange: function (e) {
     console.log(e.detail.value)
